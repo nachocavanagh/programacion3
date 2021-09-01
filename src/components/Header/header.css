@@ -1,0 +1,11 @@
+header{
+    display: flex;
+    flex-direction: row;
+    background-color: lightslategrey;
+    height: 100px;
+    padding: 20px;
+    align-items: center;
+}
+.search{
+    margin: 20px;
+}
