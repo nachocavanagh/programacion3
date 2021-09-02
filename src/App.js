@@ -6,8 +6,7 @@ function App() {
   return (
     <React.Fragment>
       <Header />
-        <main>
-          <button type="button">Cargar más tarjetas</button>
+        <main className="container">
           <section className="card-container">
             <article>
               <section className="navigation">
@@ -169,6 +168,11 @@ function App() {
                           </main>
                         </article>
           </section>
+
+          <div className="button-container">
+          <button className="more" type="button">Cargar más tarjetas</button>
+          </div>
+
         </main>
       <Footer />
     </React.Fragment>
