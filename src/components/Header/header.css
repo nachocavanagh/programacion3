@@ -6,6 +6,11 @@ header{
     padding: 20px;
     align-items: center;
 }
+.right-nav{
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 1;
+}
 .search{
     margin: 20px;
 }

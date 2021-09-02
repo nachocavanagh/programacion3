@@ -1,21 +1,11 @@
 import React from 'react'
+import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
 
 function App() {
   return (
     <React.Fragment>
-      <header>
-        <h1>Título/ Nombre de la app</h1>
-        <section>
-          <p>Ordenar ASC/ DESC</p>
-          <i className="fas fa-th"></i>
-          <i className="fas fa-align-justify"></i>
-          <form action="">
-            <input type="text" name="search" id="" placeholder="Search" />
-              <button type="submit"><i className="fas fa-search"></i></button>
-          </form>
-        </section>
-      </header>
-
+      <Header />
         <main>
           <button type="button">Cargar más tarjetas</button>
           <section className="card-container">
@@ -180,15 +170,7 @@ function App() {
                         </article>
           </section>
         </main>
-        
-        <footer>
-          <ul className="team">
-            <li>Nombre integrante 1</li>
-            <li>Nombre integrante 2</li>
-            <li>Nombre integrante 3</li>
-          </ul>
-        </footer>
-
+      <Footer />
     </React.Fragment>
   );
 }

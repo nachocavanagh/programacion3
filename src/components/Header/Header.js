@@ -4,13 +4,17 @@ import './header.css'
 function Header() {
     return (
         <header>
-            <div>
-                <h1>Proyecto</h1>
-            </div>
-            <div className="search">
-                <input className="searchBar" type="text" placeholder="Search.."></input>
-            </div>
-        </header>
+        <h1>Título/ Nombre de la app</h1>
+        <section className="right-nav">
+          <p>Ordenar ASC/ DESC</p>
+          <i className="fas fa-th"></i>
+          <i className="fas fa-align-justify"></i>
+          <form action="">
+            <input type="text" name="search" id="" placeholder="Search" />
+              <button type="submit"><i className="fas fa-search"></i></button>
+          </form>
+        </section>
+      </header>
     )
 }
 
