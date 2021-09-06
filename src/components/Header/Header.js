@@ -4,7 +4,7 @@ import './header.css'
 function Header() {
     return (
         <header>
-        <h1>Título/ Nombre de la app</h1>
+        <img className="logo" src="./assets/images/deezerLogo.png" alt="" />
         <section className="right-nav">
           <p>Ordenar ASC/ DESC</p>
           <i className="fas fa-th"></i>
