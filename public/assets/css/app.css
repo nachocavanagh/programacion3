@@ -14,7 +14,7 @@
 article{
     width: 23%;
     padding: 15px;
-    border-radius: 5%;
+    border-radius: 20px;
     background-color: rgb(212, 212, 212);
     margin: 10px;
     transition-duration: 0.4s;
