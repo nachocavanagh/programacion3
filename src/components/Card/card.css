@@ -1,0 +1,43 @@
+article{
+    width: 23%;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: rgb(212, 212, 212);
+    margin: 10px;
+    transition-duration: 0.4s;
+}
+article:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.navigation{
+    display: flex;
+    justify-content: space-between;
+}
+.image-container{
+    display: flex;
+    justify-content: space-around;
+}
+.image{
+    width: 60%;
+}
+.artist-data{
+    display: flex;
+    margin: 10px;
+    align-items: center;
+}
+.artist-img{
+    margin: 20px;
+}
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+}
+.view-more{
+    color: blue;
+}
+.view-more:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
