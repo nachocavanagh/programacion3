@@ -11,10 +11,6 @@ function App() {
           
           <Api />
 
-          <div className="button-container">
-          <button className="more" type="button">Cargar más tarjetas</button>
-          </div>
-
         </main>
       <Footer />
     </React.Fragment>

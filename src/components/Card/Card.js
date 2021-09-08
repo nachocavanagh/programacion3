@@ -33,7 +33,7 @@ render () {
                       <i className="fas fa-chevron-left"></i>
                       <i className="fas fa-chevron-right"></i>
                     </div>
-                    <i className="far fa-window-close"></i>
+                    <i className="far fa-window-close" id="borrar" onClick={() => this.props.remove(this.props.dataAlbum.id)} ></i>
                   </section>
                   <main>
                     <div className="image-container">
@@ -47,6 +47,7 @@ render () {
                           <img className="artist-img" src={this.props.dataAlbum.artist.picture_small} alt="" />
                           <p>{this.props.dataAlbum.artist.name}</p>
                         </div>
+                      <p>Explicit content: {this.props.dataAlbum.explicit_lyrics ? 'Yes' : 'No'}</p>
                       </section>
                       <p className='view-more' onClick={()=>this.viewMore()}>{this.state.text}</p>
                   </main>

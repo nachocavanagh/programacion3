@@ -41,3 +41,6 @@ article:hover{
     text-decoration: underline;
     cursor: pointer;
 }
+#borrar{
+    cursor: pointer;
+}
