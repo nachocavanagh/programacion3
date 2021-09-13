@@ -1,20 +1,16 @@
 import React from 'react'
-import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
-import Api from './components/Api/Api';
+import Api from './components/Main/Main';
 
 function App() {
   return (
     <React.Fragment>
-      <Header />
-        <main className="container">
-          
-          <Api />
-
-        </main>
+      <Api/>
       <Footer />
     </React.Fragment>
   );
 }
 
 export default App;
+
+

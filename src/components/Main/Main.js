@@ -1,5 +1,6 @@
 import React, {Component} from "react"
 import Card from '../Card/Card'
+import Header from '../Header/Header'
 
 class Api extends Component {
 constructor(){
@@ -10,7 +11,7 @@ constructor(){
     }
 }
 componentDidMount(){
-    let url = ("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/albums&top?limit=" + this.state.limit.toString())
+    let url = ("https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/albums&top?limit=" + this.state.limit.toString())
 
     fetch (url)
     .then(response => response.json())
@@ -39,13 +40,13 @@ addMore(){
 }
 
 traerMas() {
-    let url = ("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/albums&top?limit=" + this.state.limit.toString())
+    let url = ("https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/albums&top?limit=" + this.state.limit.toString())
 
     fetch(url)
         .then((response) => response.json())
         .then((data) => {
             this.setState({
-                albumes: this.state.albumes.concat(data.data),
+                albumes: data.data,
             })
             console.log(url);
         })
@@ -56,16 +57,20 @@ traerMas() {
 
 render (){
     return(
+
         <React.Fragment> 
-        <section className="card-container">
-            {this.state.albumes.map((album, idx) => <Card key={album.title + idx} dataAlbum={album} remove={(albumABorrar) => this.deleteCard(albumABorrar)} />)}
+          <Header />
+          <main className="container">
+            
+            <section className="card-container">
+             {this.state.albumes.map((album, idx) => <Card key={album.title + idx} dataAlbum={album} remove={(albumABorrar) => this.deleteCard(albumABorrar)} />)}
 
-        </section>
+            </section>
 
-        <div className="button-container">
-            <button className="more" type="button" onClick={() => this.addMore()} >Cargar más tarjetas</button>
-        </div>
-
+          <div className="button-container">
+             <button className="more" type="button" onClick={() => this.addMore()} >Cargar más tarjetas</button>
+          </div>
+        </main>
         </React.Fragment>
     )
 }

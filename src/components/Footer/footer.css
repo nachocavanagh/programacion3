@@ -3,6 +3,10 @@ footer{
     justify-content: space-around;
     background-color: lightslategrey;
     height: 100px;
+    margin-bottom: -1%;
+    margin-top: -1%;
+    margin-left: -1%;
+    
 }
 .team{
     display: flex;

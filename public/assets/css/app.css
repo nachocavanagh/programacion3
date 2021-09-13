@@ -29,3 +29,7 @@
     background-color: #242424;
     color: white;
 }
+
+#root {
+    margin-top: -1%;
+}
