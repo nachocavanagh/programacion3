@@ -4,7 +4,7 @@ import './header.css'
 class Header extends Component {
   constructor(props){
     super(props);
-    this.state={  valor: " ",
+    this.state={  valor: "",
       
     }
   }
@@ -30,8 +30,8 @@ controlarCambios (event){
       <i className="fas fa-th"></i>
       <i className="fas fa-align-justify"></i>
       <form onSubmit={(event)=>this.evitarSubmit(event)}>
-        <label>Filtrar</label>
-        <input type="text"  onChange={(event)=>this.controlarCambios(event)} value = {this.state.valor}/>
+        <label>Filtrar: </label>
+        <input type="text" onChange={(event)=>this.controlarCambios(event)} value = {this.state.valor}/>
           <button type="submit"><i className="fas fa-search"></i></button>
       </form>
     </section>

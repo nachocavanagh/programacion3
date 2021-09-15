@@ -44,3 +44,7 @@ article:hover{
 #borrar{
     cursor: pointer;
 }
+
+h3{
+    height: 100px;
+}
