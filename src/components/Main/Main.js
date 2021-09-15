@@ -8,6 +8,7 @@ constructor(){
     this.state = {
         albumes:[],
         limit: 10,
+        albumesIniciales:[],
     }
 }
 componentDidMount(){
@@ -19,6 +20,7 @@ componentDidMount(){
         console.log(data);
         this.setState({
             albumes: data.data,
+            albumesIniciales:data.data,
         })
     })
     .catch(error => console.log(error))
@@ -47,6 +49,7 @@ traerMas() {
         .then((data) => {
             this.setState({
                 albumes: data.data,
+                albumesIniciales:data.data,
             })
             console.log(url);
         })
@@ -55,11 +58,21 @@ traerMas() {
         })
 }
 
+filtrarAlbumes(textoAFiltrar){
+    let albumesFiltrados = this.state.albumesIniciales.filter( album => album.title.toLowerCase().includes(textoAFiltrar.toLowerCase()))
+
+    this.setState({
+        albumes: albumesFiltrados,
+    })
+}
+
+
 render (){
     return(
 
         <React.Fragment> 
-          <Header />
+          <Header filtrar={(texto)=>this.filtrarAlbumes(texto)}
+ />
           <main className="container">
             
             <section className="card-container">
