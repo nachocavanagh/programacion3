@@ -40,10 +40,10 @@ render () {
                       <img className="image" src={this.props.dataAlbum.cover_big} alt="" />
                     </div>
                       <h3>{this.props.dataAlbum.title}</h3>
-                      <p className="description">{this.props.dataAlbum.record_type.toUpperCase()}</p>
                       <section className={`extra ${this.state.viewMore ? 'show' : 'hide'}`}>
-                        <p>Artist:</p>
+                        <p className="description">{this.props.dataAlbum.record_type.toUpperCase()}</p>                        
                         <div className="artist-data">
+                          <p>Artist:</p>
                           <img className="artist-img" src={this.props.dataAlbum.artist.picture_small} alt="" />
                           <p>{this.props.dataAlbum.artist.name}</p>
                         </div>
