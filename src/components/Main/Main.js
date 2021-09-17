@@ -9,6 +9,7 @@ constructor(){
         albumes:[],
         limit: 10,
         albumesIniciales:[],
+        cargando: false,
     }
 }
 componentDidMount(){
@@ -21,6 +22,7 @@ componentDidMount(){
         this.setState({
             albumes: data.data,
             albumesIniciales:data.data,
+            cargando: true,
         })
     })
     .catch(error => console.log(error))
@@ -76,8 +78,12 @@ render (){
           <main className="container">
             
             <section className="card-container">
-             {this.state.albumes.map((album, idx) => <Card key={album.title + idx} dataAlbum={album} remove={(albumABorrar) => this.deleteCard(albumABorrar)} />)}
 
+            {this.state.cargando === false ?
+            <img src="https://media.tenor.com/images/7500668d515374c0dd15a7ed1e8bdbd8/tenor.gif" alt="loading"/>  :
+             this.state.albumes.map((album, idx) => <Card key={album.title + idx} dataAlbum={album} remove={(albumABorrar) => this.deleteCard(albumABorrar)} />)
+             }
+             
             </section>
 
           <div className="button-container">
@@ -87,7 +93,6 @@ render (){
         </React.Fragment>
     )
 }
-
 
 }
 
