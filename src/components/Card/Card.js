@@ -1,5 +1,6 @@
 import React, {Component} from "react"
 import './card.css'
+import '../Main/Main'
 
 class Card extends Component {
 constructor(props){
@@ -8,6 +9,7 @@ constructor(props){
         Albumes:[],
         viewMore: false,
         text: 'Ver más',
+   //     cambiarVisual:false,
     }
 }
 
@@ -25,9 +27,32 @@ viewMore(){
   }
 }
 
+
+
+//cambiarVisual (){
+//  if(this.state.viewMore){
+//    this.setState({
+//        cambiarVisual: false,
+//    })
+//  }
+// else{
+//     this.setState({
+//         cambiarVisual:true,
+//     })
+
+//}
+//}
+
+
 render () {
     return(
-             <article>
+      <React.Fragment>
+
+        
+       {/*   <p onClick = {() => this.cambiarVisual()}>wegvvvvvvvvv</p>*/}
+             <article >
+         {/* agregar className={`${this.state.cambiarVisual ? 'blocks image' : 'rows image2'} `}  */}
+
                   <section className="navigation">
                     <div>
                       <i className="fas fa-chevron-left"></i>
@@ -40,20 +65,26 @@ render () {
                       <img className="image" src={this.props.dataAlbum.cover_big} alt="" />
                     </div>
                       <h3>{this.props.dataAlbum.title}</h3>
-                      <section className={`extra ${this.state.viewMore ? 'show' : 'hide'}`}>
-                        <p className="description">{this.props.dataAlbum.record_type.toUpperCase()}</p>                        
+                      
                         <div className="artist-data">
                           <p>Artist:</p>
                           <img className="artist-img" src={this.props.dataAlbum.artist.picture_small} alt="" />
                           <p>{this.props.dataAlbum.artist.name}</p>
                         </div>
+
+                      <section className={`extra ${this.state.viewMore ? 'show' : 'hide'}`}>
+                        <p className="description">{this.props.dataAlbum.record_type.toUpperCase()}</p>                        
+                        
                       <p>Explicit content: {this.props.dataAlbum.explicit_lyrics ? 'Yes' : 'No'}</p>
+
+                      <p>Is it on radio? {this.props.dataAlbum.artist.radio ? 'Yes' : 'No'}</p>
+
                       </section>
                       <p className='view-more' onClick={()=>this.viewMore()}>{this.state.text}</p>
                   </main>
                 </article>
             
-
+                </React.Fragment>
     )
 }
 

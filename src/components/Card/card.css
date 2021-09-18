@@ -7,6 +7,35 @@ article{
     transition-duration: 0.4s;
     color: white;
 }
+
+.blocks{
+    width: 23%;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: rgb(20, 20, 20);
+    margin: 10px;
+    transition-duration: 0.4s;
+    color: white;
+}
+.rows{
+    width: 100%;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: rgb(20, 20, 20);
+    margin: 10px;
+    transition-duration: 0.4s;
+    color: white;
+}
+
+.image{
+    width: 60%;
+}
+
+.image2{
+    width: 15%;
+}
+
+
 article:hover{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     transform: scale(1.02);
@@ -19,9 +48,7 @@ article:hover{
     display: flex;
     justify-content: space-around;
 }
-.image{
-    width: 60%;
-}
+
 .artist-data{
     display: flex;
     margin: 10px;
@@ -48,6 +75,3 @@ article:hover{
     cursor: pointer;
 }
 
-h3{
-    height: 100px;
-}

@@ -1,6 +1,7 @@
 import React, {Component} from "react"
 import Card from '../Card/Card'
 import Header from '../Header/Header'
+import '../Card/card.css'
 
 class Api extends Component {
 constructor(){
