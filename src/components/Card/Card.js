@@ -9,7 +9,6 @@ constructor(props){
         Albumes:[],
         viewMore: false,
         text: 'Ver más',
-   //     cambiarVisual:false,
     }
 }
 
@@ -29,29 +28,14 @@ viewMore(){
 
 
 
-//cambiarVisual (){
-//  if(this.state.viewMore){
-//    this.setState({
-//        cambiarVisual: false,
-//    })
-//  }
-// else{
-//     this.setState({
-//         cambiarVisual:true,
-//     })
-
-//}
-//}
-
-
 render () {
     return(
       <React.Fragment>
 
         
-       {/*   <p onClick = {() => this.cambiarVisual()}>wegvvvvvvvvv</p>*/}
-             <article >
-         {/* agregar className={`${this.state.cambiarVisual ? 'blocks image' : 'rows image2'} `}  */}
+       
+             <article className={`${this.props.cambiarVisual ? 'blocks' : 'rows'} `}>
+         
 
                   <section className="navigation">
                     <div>
@@ -62,7 +46,7 @@ render () {
                   </section>
                   <main>
                     <div className="image-container">
-                      <img className="image" src={this.props.dataAlbum.cover_big} alt="" />
+                      <img className={`image ${this.props.cambiarVisual ? 'image' : 'image2 ' }`}  src={this.props.dataAlbum.cover_big} alt="" />
                     </div>
                       <h3>{this.props.dataAlbum.title}</h3>
                       

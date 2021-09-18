@@ -11,6 +11,7 @@ constructor(){
         limit: 10,
         albumesIniciales:[],
         cargando: false,
+        cambiarVisual:true
     }
 }
 componentDidMount(){
@@ -69,20 +70,33 @@ filtrarAlbumes(textoAFiltrar){
     })
 }
 
+cambiarVisual (){
+    this.setState({
+           cambiarVisual: false,
+       })
+     }
+
+   
+   cambiarVisual2 (){
+    this.setState({
+           cambiarVisual: true,
+       })
+     }
+
+   
 
 render (){
     return(
 
         <React.Fragment> 
-          <Header filtrar={(texto)=>this.filtrarAlbumes(texto)}
- />
+          <Header filtrar={(texto)=>this.filtrarAlbumes(texto)} cambiarVisual= {()=> this.cambiarVisual()} cambiarVisual2= {()=> this.cambiarVisual2()}/>
           <main className="container">
             
-            <section className="card-container">
+            <section  className="card-container">
 
             {this.state.cargando === false ?
             <img src="https://media.tenor.com/images/7500668d515374c0dd15a7ed1e8bdbd8/tenor.gif" alt="loading"/>  :
-             this.state.albumes.map((album, idx) => <Card key={album.title + idx} dataAlbum={album} remove={(albumABorrar) => this.deleteCard(albumABorrar)} />)
+             this.state.albumes.map((album, idx) => <Card key={album.title + idx} dataAlbum={album} remove={(albumABorrar) => this.deleteCard(albumABorrar)} cambiarVisual={ this.state.cambiarVisual} />)
              }
              
             </section>

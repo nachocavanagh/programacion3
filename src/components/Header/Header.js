@@ -47,8 +47,8 @@ controlarCambios (event){
     <section className="right-nav">
       <p>Ordenar ASC/ DESC</p>
       <div className="icon-container ">
-        <i className="fas fa-th" ></i>
-        <i className="fas fa-align-justify"></i>
+        <i className="fas fa-th" onClick = {() => this.props.cambiarVisual2()}></i>
+        <i className="fas fa-align-justify" onClick = {() => this.props.cambiarVisual()}></i>
       </div>
       <form onSubmit={(event)=>this.evitarSubmit(event)}>
         <input className="search-bar" placeholder="Search..." type="text" onChange={(event)=>this.controlarCambios(event)} value = {this.state.valor}/>
