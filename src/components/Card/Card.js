@@ -34,7 +34,7 @@ render () {
 
         
        
-             <article className={`${this.props.cambiarVisual ? 'blocks' : 'rows'} `}>
+             <article className={`${this.props.row ? 'blocks' : 'rows'} `}>
          
 
                   <section className="navigation">
@@ -46,7 +46,7 @@ render () {
                   </section>
                   <main>
                     <div className="image-container">
-                      <img className={`image ${this.props.cambiarVisual ? 'image' : 'image2 ' }`}  src={this.props.dataAlbum.cover_big} alt="" />
+                      <img className={`image ${this.props.row ? 'image' : 'image2 ' }`}  src={this.props.dataAlbum.cover_big} alt="" />
                     </div>
                       <h3>{this.props.dataAlbum.title}</h3>
                       
