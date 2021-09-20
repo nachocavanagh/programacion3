@@ -96,7 +96,7 @@ render (){
 
             {
                 this.state.cargando === false ?
-                <div className="loader-container"> <img className="loader" src="https://media.tenor.com/images/7500668d515374c0dd15a7ed1e8bdbd8/tenor.gif" alt="loading"/> </div>  :
+                <img src="https://media.tenor.com/images/7500668d515374c0dd15a7ed1e8bdbd8/tenor.gif" alt="loading"/>  :
                 this.state.albumes.map((album, idx) => <Card key={album.title + idx} dataAlbum={album} remove={(albumABorrar) => this.deleteCard(albumABorrar)} row={ this.state.row} />)
              }
              
