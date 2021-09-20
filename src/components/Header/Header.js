@@ -6,9 +6,7 @@ class Header extends Component {
   constructor(props){
     super(props);
     this.state={  
-      valor: "",
-//      cambiarVista: false,
-      
+      valor: "",   
     }
   }
 
@@ -25,27 +23,12 @@ controlarCambios (event){
 
 }
 
-//cambiarVisual (){
-//  if(this.state.viewMore){
-//    this.setState({
-//        cambiarVisual: false,
-//    })
-//  }
-// else{
-//     this.setState({
-//         cambiarVisual:true,
-//     })
-
-//}
-//}
-
-//onClick = {() => this.cambiarVisual()} esto iria dentro del  <i>
  render(){
    return ( 
       <header>
     <img className="logo" src="./assets/images/deezerLogo.png" alt="" />
     <section className="right-nav">
-      <p>Ordenar ASC/ DESC</p>
+      <p></p>
       <div className="icon-container ">
         <i className="fas fa-th" onClick = {() => this.props.toRow()}></i>
         <i className="fas fa-align-justify" onClick = {() => this.props.toColumn()}></i>
