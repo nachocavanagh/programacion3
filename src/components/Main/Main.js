@@ -15,7 +15,7 @@ constructor(){
     }
 }
 componentDidMount(){
-    let url = ("https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/albums&top?limit=" + this.state.limit.toString())
+    let url = ("https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/albums&top?limit=" + this.state.limit)
 
     fetch (url)
     .then(response => response.json())
@@ -42,10 +42,10 @@ addMore(){
     this.setState({
             limit: limitAnterior + 10,
         },
-        () => this.traerMas())   
+        () => this.componentDidMount())   
 }
 
-traerMas() {
+/* traerMas() {
     let url = ("https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/albums&top?limit=" + this.state.limit.toString())
 
     fetch(url)
@@ -60,7 +60,7 @@ traerMas() {
         .catch(function (e) {
             console.log(e);
         })
-}
+} */
 
 filtrarAlbumes(textoAFiltrar){
     let albumesFiltrados = this.state.albumesIniciales.filter( album => album.title.toLowerCase().includes(textoAFiltrar.toLowerCase()))

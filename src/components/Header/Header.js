@@ -7,7 +7,6 @@ class Header extends Component {
     super(props);
     this.state={  
       valor: "",
-//      cambiarVista: false,
       
     }
   }
@@ -25,21 +24,7 @@ controlarCambios (event){
 
 }
 
-//cambiarVisual (){
-//  if(this.state.viewMore){
-//    this.setState({
-//        cambiarVisual: false,
-//    })
-//  }
-// else{
-//     this.setState({
-//         cambiarVisual:true,
-//     })
 
-//}
-//}
-
-//onClick = {() => this.cambiarVisual()} esto iria dentro del  <i>
  render(){
    return ( 
       <header>
