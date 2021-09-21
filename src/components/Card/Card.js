@@ -34,7 +34,7 @@ render () {
 
         
        
-             <article className={`${this.props.row ? 'blocks' : 'rows'} `}>
+             <article className={`${this.props.row ? 'columns' : 'rows'} `}>
          
 
                   <section className="navigation">

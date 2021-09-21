@@ -45,22 +45,7 @@ addMore(){
         () => this.componentDidMount())   
 }
 
-/* traerMas() {
-    let url = ("https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/albums&top?limit=" + this.state.limit.toString())
 
-    fetch(url)
-        .then((response) => response.json())
-        .then((data) => {
-            this.setState({
-                albumes: data.data,
-                albumesIniciales:data.data,
-            })
-            console.log(url);
-        })
-        .catch(function (e) {
-            console.log(e);
-        })
-} */
 
 filtrarAlbumes(textoAFiltrar){
     let albumesFiltrados = this.state.albumesIniciales.filter( album => album.title.toLowerCase().includes(textoAFiltrar.toLowerCase()))
